@@ -1,0 +1,16 @@
+.pixel {
+  width: 64px;
+  height: 64px;
+  border: 1px solid black;
+  float: left;
+}
+
+.row-end {
+  clear: left;
+}
+
+.container {
+  width: 768px;
+  height: 768px;
+  border: 1px solid red;
+}
