@@ -1,22 +1,42 @@
 $(document).ready(function() {
-  var gridW = 8;
+  var gridW = 16;
   function drawGrid(w) {
     $(".container").empty();
     for(var x = 1; x <= Math.pow(w, 2); x++) {
       $(".container").append("<div class='pixel'></div>");
-      //if()
-      //$(".container:nth-child()")
     }
-    //floor is added in case the result is a recurring decimal
-    var pixH = Math.floor(768 / w) - 2;
+    var pixH = Math.floor(640 / w) - 2;
     $(".pixel").css({"height": pixH, "width": pixH});
-    //for testing how many pixels were drawn.
-    alert($(".pixel").length);
   }
   drawGrid(gridW);
+  defaultColour();
 
-  $("button").on("click",function () {
-    var newWidth = prompt("Choose the width of the grid");
-    drawGrid(newWidth);
+  $("#rainbow").click(function() {rainbow()});
+  $("#default").click(function() {defaultColour()});
+
+  $("#redraw").on("click", function() {
+    while(true) {
+      gridW = prompt("Width of the grid (1-32)?");
+      if(gridW >= 1 && gridW <= 32) {break};
+    }
+    drawGrid(gridW);
+
+  });
+  function defaultColour() {
+    $(".container").on("mouseenter", ".pixel", function() {
+      $(this).css("background-color", "black");
+    });
+  }
+
+  function rainbow() {
+    $(".container").on("mouseenter", ".pixel", function() {
+      var ranCol = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(
+        Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+      $(this).css("background-color", ranCol);
+    });
+  }
+
+  $("#clear").on("click", function() {
+    $(".pixel").css("background-color", "white");
   });
 });
