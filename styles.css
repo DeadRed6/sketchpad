@@ -16,3 +16,17 @@
   width: 800px;
   border: 1px solid red;
 }
+
+.options {
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+}
+
+h1 {
+  color: #5b9d87;
+  text-align: center;
+  font-family: "TakaoPGothic", serif;
+}
