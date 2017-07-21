@@ -43,7 +43,7 @@ $(document).ready(function() {
     });
   }
 
-  $("#clear").on("click", function(e) {
+  $(".pixel").on("click", function(e) {
     e.stopImmediatePropagation();
     $(".pixel").css("background-color", "white");
   });
