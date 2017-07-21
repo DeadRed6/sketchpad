@@ -38,12 +38,13 @@ $(document).ready(function() {
   }
   
   function erase() {
-    $(".pixel").on("click", function() {
+    $(".pixel").on("mouseenter", ".pixel", function() {
       $(this).css("background-color", "#ffffff");
     });
   }
 
-  $("#clear").on("click", function() {
+  $("#clear").on("click", function(e) {
+    e.stopImmediatePropagation();
     $(".pixel").css("background-color", "white");
   });
 });
