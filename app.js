@@ -38,3 +38,8 @@ $(document).ready(function() {
       $(this).css("background-color", ranCol);
     });
   }
+
+$("#clear").on("click", function() {
+    $(".pixel").css("background-color", "white");
+  });
+});
