@@ -15,6 +15,7 @@ $(document).ready(function() {
   $("#rainbow").click(function() {rainbow()});
   $("#default").click(function() {defaultColour()});
   $("#redraw").click(function() {redraw()});
+  $("#clear").click(function() {clear()});
   
   function redraw() {
     while(true) {
@@ -38,7 +39,7 @@ $(document).ready(function() {
     });
   }
 
-$("#clear").on("click", function() {
+  function clear() {
     $(".pixel").css("background-color", "white");
-  });
+  }
 });
