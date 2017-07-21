@@ -38,7 +38,7 @@ $(document).ready(function() {
   }
   
   function erase() {
-    $(".container").on("click", ".pixel", function() {
+    $(".pixel").on("click", function() {
       $(this).css("background-color", "#ffffff");
     });
   }
