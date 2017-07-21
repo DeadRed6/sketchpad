@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   $("#rainbow").click(function() {rainbow()});
   $("#default").click(function() {defaultColour()});
+  $("#erase").click(function() {erase()});
 
   $("#redraw").on("click", function() {
     while(true) {
@@ -33,6 +34,12 @@ $(document).ready(function() {
       var ranCol = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(
         Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
       $(this).css("background-color", ranCol);
+    });
+  }
+  
+  function erase() {
+    $(".container").on("click", ".pixel", function() {
+      $(this).css("background-color", "#ffffff");
     });
   }
 
