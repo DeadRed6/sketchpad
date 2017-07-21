@@ -13,6 +13,7 @@ $(document).ready(function() {
   defaultColour();
 
   $("#rainbow").click(function() {rainbow()});
+  $("#erase").click(function() {erase()});
   $("#default").click(function() {defaultColour()});
   $("#redraw").click(function() {redraw()});
   $("#clear").click(function() {clear()});
@@ -41,5 +42,11 @@ $(document).ready(function() {
 
   function clear() {
     $(".pixel").css("background-color", "white");
+  }
+  
+  function erase() {
+    $(".container").on("mouseenter", ".pixel", function() {
+     $(this).css("background-color", "white"); 
+    }
   }
 });
