@@ -42,9 +42,3 @@ $(document).ready(function() {
       $(this).css("background-color", "#ffffff");
     });
   }
-
-  $(".pixel").on("click", function(e) {
-    e.stopImmediatePropagation();
-    $(this).css("background-color", "white");
-  });
-});
