@@ -9,7 +9,6 @@ $(document).ready(function() {
     var pixH = Math.floor(640 / w) - 2;
     $(".pixel").css({"height": pixH, "width": pixH});
     }
-  }
   drawGrid(gridW);
   defaultColour();
 
