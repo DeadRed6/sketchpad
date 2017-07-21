@@ -47,6 +47,6 @@ $(document).ready(function() {
   function erase() {
     $(".container").on("mouseenter", ".pixel", function() {
      $(this).css("background-color", "white"); 
-    }
+    });
   }
 });
