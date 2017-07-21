@@ -21,9 +21,12 @@ $(document).ready(function() {
   function redraw() {
     while(true) {
       gridW = prompt("Width of the grid (1-32)?");
-      if(gridW >= 1 && gridW <= 32) {break};
+      if(gridW == null) {break};
+      if(gridW >= 1 && gridW <= 32) {
+        drawGrid(gridW);
+        break;
+      }
     }
-    drawGrid(gridW);
   }
   
   function defaultColour() {
