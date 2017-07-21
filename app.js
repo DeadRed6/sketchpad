@@ -45,6 +45,6 @@ $(document).ready(function() {
 
   $(".pixel").on("click", function(e) {
     e.stopImmediatePropagation();
-    $(".pixel").css("background-color", "white");
+    $(this).css("background-color", "white");
   });
 });
